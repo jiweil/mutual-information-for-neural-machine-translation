@@ -28,39 +28,39 @@ data_gr: A sample of training/dev/testing data.
 ## Pipelines
 (1) Training p(t|s) and p(s|t)
 
-cd training
+    cd training
 
-run matlab LSTM(1) or Attention(1) to train p(english|german)
+    run matlab LSTM(1) or Attention(1) to train p(english|german)
 
-run matlab LSTM(0) or Attention(1) to train p(german|english)
+    run matlab LSTM(0) or Attention(1) to train p(german|english)
 
 (2) generating N-best list from p(t|s)
 
-cd decode 
+    cd decode 
 
-run matlab decode()
+    run matlab decode()
 
 (3) generating the backward score of p(s|t)
 
-cd get_s_given_t
+    cd get_s_given_t
 
-(3.a) prepare data
+    (3.a) prepare data
 
-python generate_source_target.py 
+        python generate_source_target.py 
 
-(3.b) generating p(s|t)
+    (3.b) generating p(s|t)
 
-matlab generate_score()
+        matlab generate_score()
 
 (d) feature reranking
 
-cd MMI_rerank
+    cd MMI_rerank
 
-Use the open package of MERT. If you don't have mert, you can do simple grid search by running
+    Use the open package of MERT. If you don't have mert, you can do simple grid search by running
 
-python tune_bleu.py. 
+    python tune_bleu.py. 
 
-Monolingual features are not currently not included.
+    Monolingual features are not currently not included.
 
 
 For any related questions, feel free to contact jiweil@stanford.edu
