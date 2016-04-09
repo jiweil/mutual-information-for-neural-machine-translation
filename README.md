@@ -13,15 +13,15 @@ memory >= 8GB
 ## Folders
 Standard: MMI reranking for standard sequence-to-sequence models
 
-Standard/training: training p(t|s) and p(s|t)
+    Standard/training: training p(t|s) and p(s|t)
 
-Standard/decode: generating N-best list from p(t|s)
+    Standard/decode: generating N-best list from p(t|s)
 
-Standard/get_s_given_t: generating the score of p(s|t) 
+    Standard/get_s_given_t: generating the score of p(s|t) 
 
-Standard/MMI_rerank: reranking using different features including p(t|s) and p(s|t)
+    Standard/MMI_rerank: reranking using different features including p(t|s) and p(s|t)
 
-Attention: MMI reranking for attention models. 
+Attention: MMI reranking for attention models. Folders within Attention are in the same way as in Standard.
 
 data_gr: A sample of training/dev/testing data.
 
